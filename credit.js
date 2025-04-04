@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const yearLabel = document.getElementById("year-label");
     const expiryDateInput = document.getElementById("expiry-date");
     
-    // Initialize with current year
     let selectedYear = new Date().getFullYear();
-  
-    // Display calendar when clicking on expiry input
+
     window.toggleCalendar = function() {
       calendar.style.display = calendar.style.display === "block" ? "none" : "block";
       updateCalendar();
@@ -40,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const expiryDate = document.getElementById("expiry-date").value.trim();
       const cvv = document.getElementById("cvv").value.trim();
   
-      // Validation patterns
+
       const cardNumberPattern = /^[0-9]{16}$/;
       const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
       const cvvPattern = /^[0-9]{3}$/;
@@ -61,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   
       alert("Your payment has been proceed!");
-      window.location.href = "main.html";
+      window.location.href = "index.html";
     });
   });
   
